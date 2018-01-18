@@ -1,0 +1,19 @@
+Activiti Designer
+特点和安装使用：
+  1、新建Activiti项目
+  File--new--Activiti Project，填写名称即可。
+  2、新建请假流程
+    在要创建的目录如src/main/resources/activiti下，右击，new--Other--Activiti Fiagram--Next--xxx.bpmn
+  3、设计请假流程
+    为流程设置信息，Id为流程的唯一标识（建议纯英文标识），Name为流程的任意字符（任意字符），Namespace为命名空间（一般使用公司名或组织域名+项目名称，如com/company/project/module或者http://www.company.com/project/module），Document为针对当前流程功能的简短文字描述。
+    通过拖动图标和修改参数完成流程设计。
+  4、查看文件
+    右击xxx.bpmn文件--Open With--XML Editor可以查看XML格式的文件，右击xxx.bpmn文件--Open With--Activiti Digram Editor可以查看设计器形式的文件
+  5、自动生成图片
+  Windows\Linux用户在Eclipse里单击Window--Preferences；Mac用户单击Eclipse--Preferences
+     然后选择Activiti--Save，勾选Create process definition image when saving the diagram，保存修改。
+    在之后的流程新建和修改Task并保存都会在同级目录下生成同名png图片文件。
+  6、自动生成测试代码
+    在新建的Activiti工程或者是Maven工程中，按照上述步骤完成bpmn文件的设计后，右击xxx.bpmn文件--Activiti--Generate unit test
+    然后在目录src/test/java/org/activiti/designer/test下会生成对应的xxxxx.java文件
+   该文件可直接用于单元测试，操作为右键xxxxx.java文件，选择Run As--JUnit Test。
